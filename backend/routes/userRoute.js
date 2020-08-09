@@ -26,9 +26,9 @@ router.get('/list/new', async (req, res) => {
         password: 'dziobak1'
     })
     try {
-        const newUserSave = await newUser.save();
+        const newUserSaved = await newUser.save();
         console.log(newUser);
-        res.send(newUser)
+        res.send(newUserSaved)
     } catch (err) {
         console.log(err)
     }
