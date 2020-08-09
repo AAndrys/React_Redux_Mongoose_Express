@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-appredux/node_modules
+frontend/appredux/node_modules
 /.pnp
 .pnp.js
 
