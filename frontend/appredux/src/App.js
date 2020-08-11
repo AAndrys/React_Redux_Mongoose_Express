@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, signIn, logout, decrementOfNumber, addMovie } from './actions/index';
+import { increment, decrement, signIn, logout, decrementOfNumber, addMovie, removeMovie } from './actions/index';
 
 function App() {
   const isLoggedValue = useSelector((state) => state.isLoggedReducer);
@@ -19,7 +19,10 @@ function App() {
         </p>
         {isLoggedValue ? movies.movies.map((item, index) => {
           return (
-            <p key={index}>{item}</p>
+            <div>
+              <p key={index}>{item}</p>
+              <button onClick={() => dispatch(removeMovie(index))}>remove</button>
+            </div>
           )
         }) : null }
         <p

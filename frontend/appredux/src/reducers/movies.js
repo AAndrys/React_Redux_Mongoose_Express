@@ -10,6 +10,11 @@ const moviesReducer = (state = initialMovies, action) => {
                 ...state,
                 movies: [...state.movies, action.movie]
             }
+        case 'REMOVE_MOVIE':
+            return {
+                ...state,
+                movies: state.movies.filter((item, index) => index !== action.payload)
+            }
         default:
             return state
     }

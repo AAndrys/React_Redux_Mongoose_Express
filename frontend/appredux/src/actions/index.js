@@ -33,4 +33,10 @@ const addMovie = (newMovie) => {
         movie: newMovie
     }
 }
-export { increment, decrement, signIn, logout, decrementOfNumber, addMovie }
+const removeMovie = (index) => {
+    return {
+        type: 'REMOVE_MOVIE',
+        payload: index
+    }
+}
+export { increment, decrement, signIn, logout, decrementOfNumber, addMovie, removeMovie }
